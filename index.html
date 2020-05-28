@@ -61,6 +61,10 @@
             height: auto;
         }
 
+        .mainPic img {
+            display: none;
+        }
+
         .title {
             width: 100%;
             text-align: center;
@@ -95,13 +99,19 @@
         let title = document.querySelector('.title')
         let breadTxt = document.querySelector('.breadTxt')
 
-        mainPic.classList.remove('loading')
+        // mainPic.classList.remove('loading')
         title.classList.remove('loading')
         breadTxt.classList.remove('loading')
 
         mainPic.innerHTML = `<img src="./img/motor.webp" alt="no pic">`
         title.textContent = 'Splash Screen Example'
         breadTxt.innerHTML = `<p>Cough furball into food bowl then scratch owner for a new one hide head under blanket so no one can see so loves cheeseburgers funny little cat chirrup noise shaking upright tail when standing next to you. Chirp at birds rub my belly hiss. Wake up human for food at 4am i'm bored inside, let me out i'm lonely outside, let me in i can't make up my mind whether to go in or out, guess i'll just stand partway in and partway out, contemplating the universe for half an hour how dare you nudge me with your foot?!?! leap into the air in greatest offense! licks your face attack like a vicious monster so cough furball yet jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water push your water glass on the floor. Eat fish on floor Gate keepers of hell slap kitten brother with paw so annoy owner until he gives you food say meow repeatedly until belly rubs, feels good mrow but have a lot of grump in yourself because you can't forget to be grumpy and not be like king grumpy cat all of a sudden cat goes crazy. Poop in the plant pot human is washing you why halp oh the horror flee scratch hiss bite yet and sometimes switches in french and say "miaou" just because well why not for kitty scratches couch bad kitty human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken!. Sleep in the bathroom sink bird bird bird bird bird bird human why take bird out i could have eaten that but mice. Mrow eat the fat cats food so purr when being pet but stinky cat. Mewl for food at 4am instantly break out into full speed gallop across the house for no reason.</p>`
+
+        document.querySelector('.mainPic img').onload = function () {
+            console.log(this)
+            mainPic.classList.remove('loading')
+            this.style.display = 'block'
+        }
     </script>
 </body>
 </html>
