@@ -7,7 +7,8 @@
 
     <style>
         :root {
-            --shadow-color: rgba(20, 150, 55, .4)
+            --shadow-color: rgba(20, 150, 55, .4);
+            --anim-color: rgba(20, 150, 55, .1);
         }
 
         html, body {
@@ -38,7 +39,7 @@
                         to(transparent));  */
 
             background: linear-gradient(90deg, transparent, 
-                    var(--shadow-color), transparent);  
+                    var(--anim-color), transparent);  
             animation: loading 1.8s infinite;
         }
 
@@ -75,7 +76,7 @@
 </head>
 <body>
     <div class="wrapper loading">
-        <img class="mainPic loading" src="" alt="">
+        <div class="mainPic loading"></div>
         <h2 class="title loading"></h2>
         <div class="breadTxt loading"></div>
     </div>
